@@ -9,6 +9,20 @@
 <body>
 
 <!-- ═══════════════════════════════════════════════════════════════════════
+     PASSWORD SCREEN
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div id="password-screen">
+    <div class="pw-box">
+        <div class="pw-title">▌ SCREAMING EAGLES ▐</div>
+        <div class="pw-subtitle">ACCESO RESTRINGIDO · INTRODUCIR CONTRASEÑA</div>
+        <input id="pw-input" type="password" placeholder="••••••••"
+               autocomplete="off" spellcheck="false">
+        <div id="pw-error"></div>
+        <button class="btn-pw" onclick="checkPassword()">▶ ACCEDER</button>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
      SETUP SCREEN
      ═══════════════════════════════════════════════════════════════════════ -->
 <div id="setup-screen" class="screen active">
@@ -180,6 +194,42 @@
         </button>
     </div>
 </div>
+
+<!-- ── Password gate ──────────────────────────────────────────────────── -->
+<script>
+(function () {
+    const PASSWORD = 'eagles101'; // ← cambia la contraseña aquí
+    const KEY = 'se_auth';
+
+    function unlock() {
+        document.getElementById('password-screen').classList.add('hidden');
+    }
+
+    // Si ya autenticó en esta sesión, no mostrar pantalla
+    if (sessionStorage.getItem(KEY) === '1') { unlock(); return; }
+
+    window.checkPassword = function () {
+        const val = document.getElementById('pw-input').value;
+        if (val === PASSWORD) {
+            sessionStorage.setItem(KEY, '1');
+            unlock();
+        } else {
+            const err = document.getElementById('pw-error');
+            err.textContent = '✖ CONTRASEÑA INCORRECTA';
+            document.getElementById('pw-input').value = '';
+            setTimeout(() => { err.textContent = ''; }, 2000);
+        }
+    };
+
+    // Permitir Enter para confirmar
+    document.getElementById('pw-input').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') checkPassword();
+    });
+
+    // Enfocar el campo al cargar
+    document.getElementById('pw-input').focus();
+})();
+</script>
 
 <!-- ── Scripts (orden importante: dependencias primero) ─── -->
 <script src="js/loader.js"></script>

@@ -18,6 +18,50 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── Pantalla de contraseña ─────────────────────────────────────────────── */
+#password-screen {
+    position: fixed; inset: 0; z-index: 9999;
+    background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+}
+#password-screen.hidden { display: none; }
+.pw-box {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    padding: 32px 40px;
+    text-align: center;
+    min-width: 300px;
+}
+.pw-title {
+    font-size: 13px; letter-spacing: 3px;
+    color: var(--green); margin-bottom: 20px;
+}
+.pw-subtitle {
+    font-size: 10px; color: var(--green-dim);
+    letter-spacing: 2px; margin-bottom: 24px;
+}
+#pw-input {
+    background: #050e07; border: 1px solid var(--border);
+    color: var(--amber); font-family: var(--font);
+    font-size: 18px; letter-spacing: 6px;
+    text-align: center; padding: 8px 16px;
+    width: 100%; margin-bottom: 16px;
+    outline: none;
+}
+#pw-input:focus { border-color: var(--green-dim); }
+#pw-error {
+    color: var(--red); font-size: 10px;
+    letter-spacing: 2px; margin-bottom: 12px;
+    min-height: 14px;
+}
+.btn-pw {
+    background: #0a1f0d; border: 1px solid var(--border);
+    color: var(--green); font-family: var(--font);
+    font-size: 11px; letter-spacing: 2px;
+    padding: 8px 24px; cursor: pointer; width: 100%;
+}
+.btn-pw:hover { background: var(--frame); border-color: var(--green-dim); }
+
 body {
     background: var(--bg);
     color: var(--green);
