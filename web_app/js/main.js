@@ -267,6 +267,7 @@ function _startPlayerDeployment() {
     }
 
     // Mostrar hexes válidos
+    const validHexes = Engine.getDeploymentHexes(GS.playerSide, GS);
     const hlMap = {};
     for (const h of validHexes) hlMap[h] = ['hl-deploy'];
     HexMap.setHighlights(hlMap);
