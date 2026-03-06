@@ -1,0 +1,122 @@
+[ESCENARIO]
+Titulo;Day of Days
+Turnos;5
+Norte;N
+Despliega_primero;German
+Mueve_primero;American
+Descripcion;Southwest of Utah Beach, June 6th, 1944—The cross channel invasion of France was the crucial “second front” that was needed to defeat Germany. The scope of the invasion was the largest in history and the first day of the Normandy invasion would be the most important. It would be called the Day of Days and the Longest Day. The 101st Airborne was dropped around 1:00am (before the landings) so that it could support the invasion, but the drop did not go well. Units were dropped in the wrong area and were widely scattered. Colonel Robert F. Sink, who commanded the 506th Parachute Infantry Regiment (PIR), had very little information on his troops. The entire communications platoon as well as every single radio operator assigned to the headquarters company were missing. The assignment of the 506th included the capture of Causeways 1 & 2 (the lower exits from Utah beach) and to block enemy forces from those exits. Sink dispatched elements of his 1st Battalion, the only force that he had on hand, to go for Causeway 1.\nThe progress was slow. In the end, Causeway 1 would be in American hands before the\nforce from 1st Battalion would reach it. Although the capture of Causeway 1 & 2 was the\njob of the 2nd Battalion of the 506th, not only did Sink send a force from 1st Battalion, but General Taylor, the commander of the 101st, would send a force from the 3rd Battalion of the 501st. Both commanders reasoned that their forces were too small to go for Causeways 1 & 2 and so both of them independently decided to go after Causeway 1 and ignore Causeway 2. This confusion was typical of the airborne drops that day. Despite this, the drops were still undeniably effective. They tied up enemy troops and stopped reinforcement of the beaches.
+Victoria;The American player wins if he exits at least 4 squads off the east edge of the map by the end of turn 5. Otherwise the German player wins.
+
+[ALIADOS]
+Faccion;American
+Ops_rango;1-3
+Puntos_comando;1
+Ruta_huida;W
+Despliegue_inicial;Set up: All American units enter the West edge of the game board on turn 1.
+Despliegue_alternativo;
+
+[EJE]
+Faccion;German
+Ops_rango;1-2
+Puntos_comando;1
+Ruta_huida;E
+Despliegue_inicial;Set up: 2 2nd line German Infantry and 1 1st line DECOY in any hex with the number 3 or 4 and 2 2nd line German Infantry and 1 1st line DECOY in any hex with the number 5 or 6
+Despliegue_alternativo;
+
+[UNIDADES_ALIADOS]
+Tipo;Categoria;Reducida;Fichas_max;Fichas_escenario
+Paratrooper Squad;squad;NO;16;3
+Paratrooper Squad;squad;SI;16;3
+
+[UNIDADES_EJE]
+Tipo;Categoria;Reducida;Fichas_max;Fichas_escenario
+2nd Line;squad;NO;10;4
+1st Line DECOY;decoy;NO;8;2
+
+[MAPA]
+Coordenada;Terreno;Elevacion;Upper_Level;Fortificacion;Lado_NE;Lado_E;Lado_SE;Lado_SW;Lado_W;Lado_NW;Col;Row
+8H0;TERRENO ABIERTO;0;NO;NINGUNA;NO;SI;NO;NO;NO;NO;0;1
+8F0;TERRENO ABIERTO;0;NO;NINGUNA;NO;SI;NO;NO;NO;NO;0;2
+8D0;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;3
+8B0;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;4
+8I1;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;NO;NO;NO;1;0
+8G1;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;SI;NO;NO;NO;1;1
+8E1;CARRETERA;0;NO;NINGUNA;SI;NO;NO;NO;NO;NO;1;2
+8C1;CARRETERA;0;NO;NINGUNA;NO;SI;NO;NO;NO;NO;1;3
+8A1;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;4
+8H1;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;SI;SI;SI;2;1
+8F1;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;SI;SI;2;2
+8D1;CARRETERA;0;NO;NINGUNA;NO;SI;SI;NO;NO;NO;2;3
+8B1;CARRETERA;0;NO;NINGUNA;SI;NO;NO;NO;NO;NO;2;4
+8I2;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;NO;NO;3;0
+8G2;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;SI;NO;3;1
+8E2;CARRETERA;0;NO;NINGUNA;SI;NO;SI;NO;NO;SI;3;2
+8C2;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;SI;SI;3;3
+8A2;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;4
+8H2;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;NO;NO;NO;SI;4;1
+8F2;TERRENO ABIERTO;0;NO;NINGUNA;NO;SI;SI;SI;NO;NO;4;2
+8D2;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;NO;SI;SI;4;3
+8B2;CARRETERA;0;NO;NINGUNA;SI;NO;NO;NO;NO;SI;4;4
+8I3;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;NO;NO;5;0
+8G3;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;SI;NO;NO;NO;5;1
+8E3;CARRETERA;0;NO;NINGUNA;SI;NO;SI;SI;NO;SI;5;2
+8C3;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;NO;NO;5;3
+8A3;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;4
+8H3;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;SI;SI;SI;6;1
+8F3;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;SI;SI;6;2
+8D3;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;NO;NO;NO;SI;6;3
+8B3;CARRETERA;0;NO;NINGUNA;SI;NO;NO;NO;NO;SI;6;4
+8I4;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;NO;NO;7;0
+8G4;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;SI;NO;7;1
+8E4;CARRETERA;0;NO;NINGUNA;SI;NO;SI;SI;NO;SI;7;2
+8C4;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;SI;SI;NO;NO;7;3
+8A4;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;4
+8H4;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;NO;NO;NO;SI;8;1
+8F4;TERRENO ABIERTO;0;NO;NINGUNA;NO;SI;SI;SI;NO;NO;8;2
+8D4;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;SI;SI;SI;8;3
+8B4;CARRETERA;0;NO;NINGUNA;SI;SI;NO;NO;NO;SI;8;4
+8I5;CARRETERA;0;NO;NINGUNA;NO;NO;NO;SI;NO;NO;9;0
+8G5;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;SI;NO;NO;NO;9;1
+8E5;CARRETERA;0;NO;NINGUNA;NO;NO;SI;SI;NO;SI;9;2
+8C5;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;SI;SI;NO;9;3
+8A5;CARRETERA;0;NO;NINGUNA;SI;NO;NO;NO;NO;NO;9;4
+8H5;CARRETERA;0;NO;NINGUNA;NO;SI;NO;SI;SI;NO;10;1
+8F5;CARRETERA;0;NO;NINGUNA;NO;SI;NO;NO;SI;SI;10;2
+8D5;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;NO;NO;NO;SI;10;3
+8B5;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;SI;NO;10;4
+8I6;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;NO;NO;NO;11;0
+8G6;CARRETERA;0;NO;NINGUNA;SI;SI;SI;NO;SI;NO;11;1
+8E6;CARRETERA;0;NO;NINGUNA;SI;NO;SI;SI;NO;NO;11;2
+8C6;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;NO;NO;NO;NO;11;3
+8A6;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;NO;NO;SI;11;4
+8H6;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;SI;SI;SI;12;1
+8F6;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;SI;SI;12;2
+8D6;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;SI;SI;SI;12;3
+8B6;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;SI;SI;NO;NO;12;4
+8I7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;NO;NO;13;0
+8G7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;SI;NO;13;1
+8E7;CARRETERA;0;NO;NINGUNA;SI;NO;SI;SI;NO;SI;13;2
+8C7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;SI;SI;NO;13;3
+8A7;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;NO;NO;SI;13;4
+8H7;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;NO;NO;SI;14;1
+8F7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;NO;NO;14;2
+8D7;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;NO;NO;SI;14;3
+8B7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;SI;NO;14;4
+8I8;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;SI;SI;NO;NO;15;0
+8G8;TERRENO ABIERTO;0;NO;NINGUNA;NO;SI;NO;NO;NO;NO;15;1
+8E8;CARRETERA;0;NO;NINGUNA;SI;NO;SI;SI;NO;SI;15;2
+8C8;TERRENO ABIERTO;0;NO;NINGUNA;NO;SI;NO;NO;NO;NO;15;3
+8A8;TERRENO ABIERTO;0;NO;NINGUNA;SI;NO;NO;NO;NO;SI;15;4
+8H8;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;SI;NO;NO;SI;16;1
+8F8;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;SI;SI;NO;NO;16;2
+8D8;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;SI;NO;NO;SI;16;3
+8B8;TERRENO ABIERTO;0;NO;NINGUNA;SI;SI;SI;SI;NO;NO;16;4
+8I9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;SI;NO;NO;17;0
+8G9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;SI;SI;SI;17;1
+8E9;CARRETERA;0;NO;NINGUNA;NO;NO;NO;SI;NO;SI;17;2
+8C9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;SI;SI;SI;17;3
+8A9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;SI;17;4
+8H9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;SI;NO;18;1
+8F9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;SI;NO;18;2
+8D9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;SI;NO;18;3
+8B9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;SI;NO;18;4

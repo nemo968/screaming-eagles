@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCREAMING EAGLES — AI OPPONENT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     SETUP SCREEN
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div id="setup-screen" class="screen active">
+    <div class="setup-box">
+        <div class="setup-title">
+            ▌ SCREAMING EAGLES — AI OPPONENT ▐<br>
+            <span style="font-size:11px;color:#1a8a1a;letter-spacing:4px">BAND OF BROTHERS SERIES · WORTHINGTON PUBLISHING</span>
+        </div>
+
+        <div class="setup-section-label">▶ ELEGIR BANDO</div>
+        <div class="faction-row">
+            <button class="faction-btn active" data-faction="american"
+                    onclick="App.selectFaction(this)">
+                ◉ AMERICAN<br>
+                <span style="font-size:9px;color:#888">101st Airborne</span>
+            </button>
+            <button class="faction-btn" data-faction="german"
+                    onclick="App.selectFaction(this)">
+                ○ GERMAN<br>
+                <span style="font-size:9px;color:#888">Wehrmacht</span>
+            </button>
+        </div>
+
+        <div class="setup-section-label">▶ ELEGIR ESCENARIO</div>
+        <div id="scenario-list"></div>
+
+        <div class="scenario-info">
+            <strong id="scenario-title">— Selecciona un escenario —</strong>
+            <div id="scenario-turns" style="color:#ffaa00;margin-bottom:4px"></div>
+            <div id="scenario-desc" style="margin-bottom:4px"></div>
+            <div id="scenario-victoria" style="font-size:10px;color:#aaddaa"></div>
+        </div>
+
+        <button class="btn-start" onclick="App.startGame()">
+            ▶ INICIAR PARTIDA
+        </button>
+
+        <div style="margin-top:12px;font-size:9px;color:#1a5a1a;text-align:center;letter-spacing:1px">
+            Asegúrate de que el servidor está activo: python3 start_server.py
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     GAME SCREEN
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div id="game-screen" class="screen" style="display:none">
+
+    <!-- ── Header ──────────────────────────────────────────────────── -->
+    <div id="header">
+        <span class="hdr-brand">▌ SCREAMING EAGLES ▐</span>
+        <span id="hdr-turn">TURNO 1/4</span>
+        <span id="hdr-phase">▌ DESPLIEGUE ▐</span>
+        <span id="hdr-ops" style="display:none"></span>
+        <span id="hdr-cp" style="display:none"></span>
+        <span id="hdr-ai-indicator">◌ IA...</span>
+        <span id="kb-hint">SPC=dado · M=mover · F=disparar · O=opfire · P=pasar · ESC=cancelar</span>
+        <span id="hdr-clock">00:00:00</span>
+    </div>
+
+    <!-- ── Body ─────────────────────────────────────────────────────── -->
+    <div id="body">
+
+        <!-- ── Panel Izquierdo ─────────────────────────────────────── -->
+        <div id="panel-left">
+
+            <div class="panel-section">
+                <div class="panel-label">▶ ALIADOS</div>
+                <div class="unit-list" id="unit-list-aliados"></div>
+            </div>
+
+            <div class="panel-section">
+                <div class="panel-label">▶ EJE (IA)</div>
+                <div class="unit-list" id="unit-list-eje"></div>
+            </div>
+
+            <div class="panel-section" style="flex:1;display:flex;flex-direction:column;overflow:hidden">
+                <div class="panel-label">▶ LOG OPERACIONES</div>
+                <div id="ops-log"></div>
+            </div>
+
+        </div>
+
+        <!-- ── Panel Mapa ──────────────────────────────────────────── -->
+        <div id="panel-map">
+            <svg id="hexmap"></svg>
+        </div>
+
+        <!-- ── Panel Derecho ──────────────────────────────────────── -->
+        <div id="panel-right">
+
+            <!-- Detalles de unidad -->
+            <div class="panel-section" id="unit-detail">
+                <div class="panel-label">▶ UNIDAD SELECCIONADA</div>
+                <div style="padding:6px 8px">
+                    <div id="detail-name" style="color:#ffaa00;font-size:13px;font-weight:bold;margin-bottom:5px">— Sin selección —</div>
+                    <div class="detail-row"><span id="detail-cat"></span><span id="detail-side" style="color:#888;font-size:10px"></span></div>
+                    <div class="detail-row"><span id="detail-fp"></span></div>
+                    <div class="detail-row"><span id="detail-melee"></span></div>
+                    <div class="detail-row"><span id="detail-range"></span></div>
+                    <div class="detail-row"><span id="detail-moral"></span></div>
+                    <div class="detail-row"><span id="detail-mps"></span></div>
+                    <div class="detail-row"><span id="detail-status"></span></div>
+                    <div class="detail-row"><span id="detail-cara"></span><span id="detail-oculto" style="color:#55ff55;font-size:11px"></span></div>
+                    <div class="detail-row"><span id="detail-coord" style="color:#ffaa00"></span></div>
+                    <div class="detail-row"><span id="detail-markers" style="color:#666;font-size:10px"></span></div>
+                </div>
+            </div>
+
+            <!-- Acciones -->
+            <div class="panel-section" id="action-panel">
+                <div class="action-label">▶ ACCIONES</div>
+                <button id="btn-mover"    class="btn-action btn-primary" onclick="App.actionMover()">⇒ MOVER</button>
+                <button id="btn-disparar"   class="btn-action btn-primary" onclick="App.actionDisparar()">⚡ DISPARAR</button>
+                <button id="btn-fuego-comb" class="btn-action btn-primary" onclick="App.actionFuegoComb()">⚡⚡ FUEGO COMB.</button>
+                <button id="btn-opfire"     class="btn-action btn-amber"   onclick="App.actionOpFire()">◉ OP FIRE</button>
+                <button id="btn-finseq"   class="btn-action btn-amber"   onclick="App.actionFinSeq()">✔ FIN SECUENCIA</button>
+                <button id="btn-cp"       class="btn-action btn-amber"   onclick="App.actionCP()">★ GASTAR CP</button>
+                <button id="btn-humo"      class="btn-action btn-amber" onclick="App.actionTirarHumo()" style="display:none">☁ HUMO</button>
+                <button id="btn-bombardeo" class="btn-action btn-red"   onclick="App.actionBomardeo()" style="display:none">✈ BOMBARDEO</button>
+                <button id="btn-pasar"    class="btn-action btn-red"     onclick="App.actionPasar()">⏸ PASAR</button>
+                <button id="btn-continue" class="btn-action btn-amber"   style="display:none">▶ CONTINUAR</button>
+            </div>
+
+            <!-- Dados -->
+            <div class="panel-section" id="dice-panel">
+                <div class="dice-label">▶ DADOS</div>
+                <div id="dice-pending-label"></div>
+                <div id="dice-result">—</div>
+                <button id="btn-roll-dice" class="btn-action" onclick="App.rollDice()" style="display:block;text-align:center">
+                    ⚀ TIRAR d10
+                </button>
+                <button id="btn-los-check" class="btn-action btn-los" onclick="App.actionLOSCheck()" style="display:block;margin-top:6px">
+                    👁 COMPROBAR LOS
+                </button>
+            </div>
+
+            <!-- CPs restantes -->
+            <div class="panel-section" id="cp-panel">
+                <div class="action-label">▶ PUNTOS DE COMANDO</div>
+                <div id="statusbar-info" style="padding:4px 0;font-size:10px;color:#888">—</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── Statusbar ─────────────────────────────────────────────── -->
+    <div id="statusbar">
+        <span id="status-dot" class="dot-ok">●</span>
+        <span id="statusbar-msg" class="status-ok">● SISTEMA LISTO</span>
+    </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     MODAL DE VICTORIA
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div id="victory-modal">
+    <div class="victory-box">
+        <div id="victory-title">★ VICTORIA ★</div>
+        <div id="victory-subtitle">¡Objetivo completado!</div>
+        <button class="btn-modal-close"
+                onclick="document.getElementById('victory-modal').style.display='none'">
+            ✖ CERRAR
+        </button>
+        &nbsp;
+        <button class="btn-modal-close" onclick="location.reload()">
+            ↺ NUEVA PARTIDA
+        </button>
+    </div>
+</div>
+
+<!-- ── Scripts (orden importante: dependencias primero) ─── -->
+<script src="js/loader.js"></script>
+<script src="js/hexmap.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

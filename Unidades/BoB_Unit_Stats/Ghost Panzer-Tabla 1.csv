@@ -1,0 +1,76 @@
+Tabla 1
+Tipo de unidad;Número de fichas;Potencia de fuego;Potencia eficiente;Potencia en melee;Alcance;SATW;Baja reducción;Baja de elimin.;Moral    alta;Moral   media;Moral   baja;Blindaje frontal;Blindaje lat/trasero;Mov. vehículos;Eficacia
+German Infantry;;;;;;;;;;;;;;;
+1st Line MG WT;3;8;7;2;14;;4;7;10;6;2;;;;
+1st Line MG WT (Reducida);3;7;5;1;12;;4;;9;6;2;;;;
+Mortar WT;1;6;4;2;2-12;;4;7;10;6;2;;;;
+Mortar WT (Reducida);1;5;2;1;2-12;;4;;9;6;2;;;;
+Panzer Grenadier;18;6;5;;6;2;4;7;10;6;1;;;;
+Panzer Grenadier (Reducida);18;6;4;;6;3;4;;9;5;1;;;;
+Panzer Grenadr w/ Pzshrk;2;6;5;;6;2;4;7;10;6;1;;;;
+Panzer Grenadr w/ Pzshrk (Reducida);2;6;4;;6;3;4;;9;5;1;;;;
+Panzer Grenadier DECOY;6;6;5;;6;2;4;7;10;6;1;;;;
+Panzer Grenadier DECOY (Reducida);6;6;4;;6;3;4;;9;5;1;;;;
+German Veh. & Guns;;;;;;;;;;;;;;;
+PzIIF;2;4;7;;;;;;;;;2;1;14;9
+Pz35(t);4;5;9;;;;;;;;;2;1;13;7
+Pz38(t);4;6;9;;;;;;;;;3;2;13;7
+PzIIIF;3;6;9;;;;;;;;;2;2;13;9
+PzIIIG;4;8;9;;;;;;;;;3;2;12;9
+PzIIIJ;5;10;9;;;;;;;;;4;2;12;9
+PzIIIFL;2;7;11;;;;;;;;;6;2;12;8
+PzIVE;2;7;10;;;;;;;;;4;2;13;8
+PzIVF2;4;13;10;;;;;;;;;4;3;13;8
+PzIVH;3;13;10;;;;;;;;;6;3;12;8
+PzVG;3;16;10;;;;;;;;;12;4;14;8
+Stug IIIB;3;7;8;;;;;;;;;4;2;13;7
+German StuH 42 (105mm);4;10;11;;;;;;;;;6;2;12;7
+Marder II;3;13;8;;;;;;;;;2;1;12;9
+Ferdinand (Pzjgr Tiger);4;19;8;;;;;;;;;12;7;7;7
+37mm PaK 35;3;6;5;;;;6;3;10;6;2;;;;9
+50mm PaK 38;3;10;6;;;;6;3;10;6;2;;;;8
+75mm PaK 40;3;13;8;;;;6;3;10;6;2;;;;8
+88mm AA;2;15;10;;;;5;2;10;6;2;;;;9
+105mm K18;3;15;10;;;;5;2;10;6;2;;;;7
+SPW 251/1;10;;;;;;;;;;;1;1;14;
+Stuka JU87;4;7;11;;;;;;;;;;;;6
+Russian Infantry;;;;;;;;;;;;;;;
+Early War;24;4;1;;4;;3;6;10;5;1;;;;
+Early War (Reducida);24;4;0;;4;;3;;7;4;1;;;;
+Type A Late War;12;4;1;;4;;3;7;10;5;1;;;;
+Type A Late War (Reducida);12;4;1;;4;;3;;8;5;1;;;;
+Type B Late War;12;5;2;;5;;3;7;10;5;1;;;;
+Type B Late War (Reducida);12;4;1;;5;;3;;8;5;1;;;;
+Submachine Gun;10;6;4;;2;;4;7;10;6;1;;;;
+Submachine Gun (Reducida);10;5;3;;2;;4;;8;5;1;;;;
+MG First Line;4;7;5;2;12;;4;7;10;6;2;;;;
+MG First Line (Reducida);4;6;4;1;10;;4;;8;6;2;;;;
+(1942) ATR;4;3;1;;4;1;3;7;10;5;1;;;;
+(1942) ATR (Reducida);4;3;0;;4;2;3;;8;5;1;;;;
+Russian 50mm Mortar WT;3;6;3;2;2-20;;4;7;10;6;2;;;;
+Russian 50mm Mortar WT (Reducida);3;5;2;1;2-20;;4;;8;6;2;;;;
+Early War DECOY;7;4;1;;4;;3;6;10;5;1;;;;
+Early War DECOY (Reducida);7;4;0;;4;;3;;7;4;1;;;;
+Russian Veh & Guns;;;;;;;;;;;;;;;
+T34M40;6;8;9;;;;;;;;;7;4;16;5
+T34M41;6;9;9;;;;;;;;;7;4;16;5
+T34M43;6;9;9;;;;;;;;;8;4;15;6
+T34/85;;;;;;;;;;;;;;;
+SU85;3;13;9;;;;;;;;;8;4;15;5
+KV1M40;2;8;9;;;;;;;;;7;6;11;6
+KV1M41;4;9;9;;;;;;;;;8;7;10;6
+T26S;4;7;8;;;;;;;;;2;1;10;5
+BT7;8;7;8;;;;;;;;;1;1;20;5
+T60;4;5;6;;;;;;;;;2;1;14;5
+T70;6;7;7;;;;;;;;;4;3;13;5
+45MM;3;7;6;;;;6;3;10;6;2;;;;8
+76MM;3;9;8;;;;6;3;10;6;2;;;;8
+85mm AA Gun;3;12;10;;;;5;2;10;6;2;;;;9
+Neutral Counters;;;;;;;;;;;;;;;
+Foxholes;22;;;;;;;;;;;;;;
+Artillery 80mm;2;;;;;;;;;;;;;;
+Artillery 100mm;2;;;;;;;;;;;;;;
+Artillery 120mm;1;;;;;;;;;;;;;;
+Artillery 150mm;1;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;
+;242;;;;;;;;;;;;;;

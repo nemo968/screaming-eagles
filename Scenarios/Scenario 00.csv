@@ -1,0 +1,123 @@
+[ESCENARIO]
+Titulo;Capture the Bridge
+Turnos;4
+Norte;N
+Despliega_primero;German
+Mueve_primero;American
+Descripcion;This training scenario is meant to introduce new players to the system or to be used as a quick filler game. As the Americans moved into Germany in 1945 they sometimes encountered small pockets of fanatics intent on destroying infrastructure. Here the 101st rush a bridge before it can be blown up. Only Squads, a Decoy, and an MG Weapon Team are used.\nTraining Scenario Strategy Tips: You must strive to identify the German units (and whether the Germans have selected a second Decoy) as quickly as possible. Your Para Squads are relatively resilient and their Assault Fire is very effective, but the key enemy unit is the German MG WT, which can do them a lot of harm. You would ideally like to Suppress or Kill the Germans before advancing to the building hex but shortage of time means that you will have to judge when to rush it. On the last turn your CP is best saved for a potential Rout Check on a unit in hex 5B5, or re-roll of a Melee there. As the Germans you obviously set up in the buildings under Conceal markers with the advantage of uncertainty, and the possibility of forcing the American player to rush before he is ready for fear that the game will only last three turns. Your MG WT should not be voluntarily revealed unless it has a shot with high probability of Killing/Reducing an American unit. Use of your CP depends on whether your strategy is to prevent the American from reaching hex 5B5 or to deny him sole control by Melee or Rout.
+Victoria;The American player wins if at game end he controls the bridge hex (5E5) AND is the sole occupant of building hex 5B5
+
+[ALIADOS]
+Faccion;American
+Ops_rango;1-2
+Puntos_comando;1
+Ruta_huida;W
+Despliegue_inicial;Turn 1: They enter the West edge of the map.
+Despliegue_alternativo;
+
+[EJE]
+Faccion;German
+Ops_rango;1-2
+Puntos_comando;1
+Ruta_huida;E
+Despliegue_inicial;At start: In any hex East of the canal.
+Despliegue_alternativo;The German player may secretly exchange his MG WT for a second Decoy. If he does so the\ngame length becomes THREE turns (but the American player will not be aware of this until the second Decoy is revealed).
+
+[UNIDADES_ALIADOS]
+Tipo;Categoria;Reducida;Fichas_max;Fichas_escenario
+Paratrooper Squad;squad;NO;16;4
+Paratrooper MG;wt_mg;NO;3;1
+
+[UNIDADES_EJE]
+Tipo;Categoria;Reducida;Fichas_max;Fichas_escenario
+2nd Line;squad;NO;10;2
+1st Line MG WT;wt_mg;NO;3;1
+1st Line DECOY;decoy;NO;8;1
+
+[MAPA]
+Coordenada;Terreno;Elevacion;Upper_Level;Fortificacion;Lado_N;Lado_NE;Lado_SE;Lado_S;Lado_SW;Lado_NW;Col;Row
+5I9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;1
+5I8;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;2
+5I7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;3
+5I6;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;4
+5I5;CARRETERA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;5
+5I4;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;6
+5I3;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;7
+5I2;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;8
+5I1;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;0;9
+5H9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;0
+5H8;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;1
+5H7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;2
+5H6;EDIF. PIEDRA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;3
+5H5;CARRETERA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;4
+5H4;EDIF. PIEDRA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;5
+5H3;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;6
+5H2;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;7
+5H1;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;8
+5H0;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;1;9
+5G9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;2;1
+5G8;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;2;2
+5G7;EDIF. PIEDRA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;2;3
+5G6;CARRETERA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;2;4
+5G5;EDIF. PIEDRA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;2;5
+5G4;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;2;6
+5G3;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;2;7
+5G2;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;2;8
+5G1;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;2;9
+5F9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;0
+5F8;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;1
+5F7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;2
+5F6;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;3
+5F5;CARRETERA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;4
+5F4;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;5
+5F3;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;6
+5F2;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;7
+5F1;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;8
+5F0;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;3;9
+5E9;RIO / CANAL;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;4;1
+5E8;RIO / CANAL;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;4;2
+5E7;RIO / CANAL;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;4;3
+5E6;RIO / CANAL;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;4;4
+5E5;PUENTE;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;4;5
+5E4;RIO / CANAL;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;4;6
+5E3;RIO / CANAL;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;4;7
+5E2;RIO / CANAL;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;4;8
+5E1;RIO / CANAL;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;4;9
+5D9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;0
+5D8;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;1
+5D7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;2
+5D6;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;3
+5D5;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;4
+5D4;CARRETERA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;5
+5D3;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;6
+5D2;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;7
+5D1;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;8
+5D0;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;5;9
+5C9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;6;1
+5C8;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;6;2
+5C7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;6;3
+5C6;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;6;4
+5C5;EDIF. PIEDRA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;6;5
+5C4;CARRETERA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;6;6
+5C3;EDIF. PIEDRA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;6;7
+5C2;BOSQUE;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;6;8
+5C1;EDIF. PIEDRA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;6;9
+5B9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;0
+5B8;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;1
+5B7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;2
+5B6;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;3
+5B5;EDIF. PIEDRA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;4
+5B4;CARRETERA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;5
+5B3;EDIF. PIEDRA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;6
+5B2;EDIF. MADERA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;7
+5B1;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;8
+5B0;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;7;9
+5A9;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;8;1
+5A8;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;8;2
+5A7;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;8;3
+5A6;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;8;4
+5A5;CARRETERA;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;8;5
+5A4;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;8;6
+5A3;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;8;7
+5A2;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;8;8
+5A1;TERRENO ABIERTO;0;NO;NINGUNA;NO;NO;NO;NO;NO;NO;8;9
